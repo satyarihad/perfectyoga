@@ -1,5 +1,59 @@
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+
 body{
   background-color: #F2F5F2;
+  font-family: 'poppins', sans-serif !important;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+
     /* background: linear-gradient(
 -80.37deg,
 rgba(0, 148, 255, 0.2) 11.06%,
@@ -68,10 +122,34 @@ rgba(255, 255, 255, 0.2) 102.87%
 .about-section {
   padding: 4rem 2rem;
 }
+.about_us {
+  /* max-width: 700px;
+  margin: 0 auto; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.about_us img{
+  width: 1100px;
+  height: auto;
 
+}
 .about-img {
-  width: 100%;
+  /* max-width: 500px; */
+  /* width: 100%; */
   border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.about_us-subtext h2{
+  color: rgb(62, 86, 70);
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+.about_us-subtext h2 span{
+  color: #cc9a3a;
+}
+.about_us-subtext p{
+  line-height: 2;
 }
 .navbar-brand img {
     height: 50px; /* Adjust logo size */
@@ -334,12 +412,12 @@ color: #e23f32;
 .contact_information a{
     text-decoration: none;
     color: oklch(.446 .03 256.802);
-    font-weight: 600;
+    font-weight: 400;
 }
 .contact_information p{
     text-decoration: none;
     color: oklch(.446 .03 256.802);
-    font-weight: 600;
+    font-weight: 400;
 }
 .contact_information i {
     font-size: 25px;     /* Adjust size */
@@ -383,10 +461,12 @@ color: #e23f32;
     color: oklch(.448 .119 151.328);
   }
   .boxShadow label{
-    font-weight: 600;
+    font-weight: 400;
     color: oklch(.446 .03 256.802);
   }
   .boxShadow .personalized_attention{
+    display: flex;
+    align-items: center;
     line-height: 3;
   }
  .personalized_attention{
@@ -492,9 +572,25 @@ color: #e23f32;
     text-decoration: none;
     color: #000;
 }
-
 .groupSessions{
   width: 45%;
+}
+.about_us-sub{
+  position: relative;
+}
+.about_us-sub-text{
+  position: absolute;
+  top: 38%;
+  text-align: center;
+  color: #fff;
+  left: 7%;
+}
+
+.about_us-sub-text h2{
+  color: #fff !important;
+}
+.about_us-sub-text p{
+
 }
 @media (max-width: 768px) {
     .hero-section {
