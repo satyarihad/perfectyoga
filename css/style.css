@@ -1,0 +1,518 @@
+body{
+  background-color: #F2F5F2;
+    /* background: linear-gradient(
+-80.37deg,
+rgba(0, 148, 255, 0.2) 11.06%,
+rgba(217, 217, 217, 0) 102.87%,
+rgba(217, 217, 217, 0) 102.87%,
+rgba(255, 255, 255, 0.2) 102.87%
+); */
+}
+
+.hero-section {
+  display: flex;
+  height: 100vh;
+}
+
+.hero-left, .hero-right {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.hero-left {
+  background-image: url('../images/nnFlrRdg2k2m9yU5tq8Y.webp');
+  /* background-image: url('./images/nnFlrRdg2k2m9yU5tq8Y.webp'); */
+}
+
+.hero-right {
+  background-image: url('../images/Yoga-for-Pregnant-Women.webp');
+}
+
+.overlay-text {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.box-section {
+  position: relative;
+  z-index: 10;
+  margin-top: -90px; /* Adjust this if you want higher/lower overlap */
+}
+
+.info-box {
+    background-color: #25d366;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    color: #fff;
+    /* height: 16rem; */
+    transition: 0.5s;
+}
+.info-box:hover{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin-top: -10px;
+}
+.days_date div{
+  font-weight: 600;
+}
+/* About Us Section */
+.about-section {
+  padding: 4rem 2rem;
+}
+
+.about-img {
+  width: 100%;
+  border-radius: 10px;
+}
+.navbar-brand img {
+    height: 50px; /* Adjust logo size */
+  }
+
+  #navbar {
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* When navbar becomes fixed */
+  .navbar-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #F2F5F2;
+    /* background: linear-gradient(
+    -80.37deg,
+    rgba(0, 148, 255, 0.2) 11.06%,
+    rgba(217, 217, 217, 0) 102.87%,
+    rgba(217, 217, 217, 0) 102.87%,
+    rgba(255, 255, 255, 0.2) 102.87%
+    ); */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  .footer {
+    padding: 10px;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    font-weight: 500;
+    color: #fff;
+    background-color: #0f6646;
+
+  }
+.google_gredient{
+color: #e23f32;
+}
+/* Full-screen Slider */
+.hero-slider {
+    width: 100%;
+    height: 750px;
+    position: relative;
+}
+
+/* Individual Slide */
+.hero-slide {
+    width: 100%;
+    height: 750px;
+    position: relative;
+    display: flex;
+    align-items: center;  /* Centers vertically */
+    justify-content: center; /* Centers horizontally */
+    text-align: center;
+    color: white;
+}
+
+/* Background Images */
+.slide-1 {
+    background: url('../images/slider1.jpg');
+    background-position: center;
+    background-size: cover;
+    object-fit: fill;
+    background-repeat: no-repeat;
+}
+
+.slide-2 {
+    background: url('../images/slider5.jpg');
+    background-position: center;
+    background-size: cover;
+    object-fit: fill;
+    background-repeat: no-repeat;
+}
+
+/* Dark Overlay for Readability */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: rgba(0, 0, 0, 0.5); */
+}
+
+/* Centering Content */
+.hero-content {
+    position: absolute;
+    z-index: 1;
+    text-align: left;
+    margin: 0 auto;
+    top: 30%;
+    width: max-content;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* Title */
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #8d1c1c;
+}
+
+/* Paragraph */
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #8d1c1c;
+}
+
+/* Button */
+.bookTrail {
+    background: #fff; 
+    color: #6c757d;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    
+}
+.bookTrail:hover{
+  background: #fff; 
+  color: #000;
+  /* color: #6c757d; */
+}
+
+/* Slick Arrows Customization */
+.slick-prev, .slick-next {
+    font-size: 30px;
+    /* color: white; */
+    z-index: 1000;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    /* background: rgba(0, 0, 0, 0.5); */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.slick-prev {
+    left: 20px;
+}
+
+.slick-next {
+    right: 100px;
+}
+
+/* Custom Arrows Icon */
+.slick-prev::before, .slick-next::before {
+    content: "";
+    /* font-size: 24px;
+    color: white; */
+}
+/* Custom Arrow Icons */
+.slick-prev::after, .slick-next::after {
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+}
+
+/* Left Arrow */
+.slick-prev::after {
+    content: '◀';  /* Unicode for Left Arrow */
+}
+
+/* Right Arrow */
+.slick-next::after {
+    content: '▶';  /* Unicode for Right Arrow */
+}
+
+/* Slick Dots */
+/* .slick-dots {
+    bottom: 20px;
+} */
+.form-label{
+    margin: 0;
+    padding: 0;
+}
+.modal-content {
+    background-color: #1A76D1;
+    color: #fff;
+  }
+  /* Days and Date */
+
+  .weekDays-selector input {
+    display: none!important;
+  }
+ 
+  .weekDays-selector input[type=checkbox] + label {
+    display: inline-block;
+    border-radius: 6px;
+    /* background: #dddddd; */
+    margin-right: 3px;
+    text-align: center;
+    cursor: pointer;
+    padding: 10px 10px;
+    border: 1px solid #fff;
+  }
+  .weekDays-selector input[type=checkbox]:hover + label {
+    background-color: #1c5894;
+  }
+  .weekDays-selector input[type=checkbox]:checked + label {
+    background: #1c5894;
+    color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: 1px solid #1c5894;
+  }
+ 
+  .custome_riview img{
+    width: 100%;
+    height: 253px;
+}
+
+/* Premium Pilate */
+.premium_yoga_faclities .boxShadow{
+
+    border: 0px solid #fff;
+    outline: 0;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: .75rem;
+}
+
+.premium_yoga_faclities .heading_text{
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+.premium_yoga_faclities .subheading_text{
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: oklch(.446 .03 256.802);
+    margin-bottom: 40px;
+}
+.premium_yoga_faclities .heading_text span{
+    color: rgb(204, 154, 58);
+}
+.form_section .card{
+    padding: 10px;
+}
+.form_section img{
+    max-width: 20px;
+}
+.form_section h1{
+    font-size: 23px;
+}
+.contact_information{
+    display: flex;
+    align-items: start;
+}
+.contact_information a{
+    text-decoration: none;
+    color: oklch(.446 .03 256.802);
+    font-weight: 600;
+}
+.contact_information p{
+    text-decoration: none;
+    color: oklch(.446 .03 256.802);
+    font-weight: 600;
+}
+.contact_information i {
+    font-size: 25px;     /* Adjust size */
+    color: oklch(.446 .03 256.802);;       /* Bootstrap blue or any color */
+    /* Space between icon and text */
+    font-weight: bolder;
+    background-color: #f2f5f3;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  .contact_information h4{
+    font-size: 20px;
+  }
+  .contact_information p{
+    font-size: 16px;
+  }
+  .customer-slider{
+    max-width: 500px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .limited_priod_offer h1{
+    text-align: center;
+    font-weight: bolder;
+    
+  }
+  .limited_priod_offer .yoga{
+    text-align: center;
+    font-weight: bolder;
+    color: oklch(.795 .184 86.047);
+    margin-bottom: 10px;
+  }
+
+  .limited_priod_offer .limited{
+    background-color: #dbfce7;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 600;
+    color: oklch(.448 .119 151.328);
+  }
+  .boxShadow label{
+    font-weight: 600;
+    color: oklch(.446 .03 256.802);
+  }
+  .boxShadow .personalized_attention{
+    line-height: 3;
+  }
+ .personalized_attention{
+    font-weight: 400;
+    color: oklch(.373 .034 259.733);
+ }
+  .groupSession h3{
+    color: oklch(.448 .119 151.328);
+    font-weight: 700;
+  }
+  .groupSession .saveRupees{
+    background-color: #fef3c6;
+    padding: 5px 10px;
+    color: oklch(.473 .137 46.201);
+    font-weight: 600;
+    width: max-content;
+    border-radius: 5px;
+  }
+  .sessionList{
+    line-height: 2.5;
+    color: oklch(.373 .034 259.733);
+    font-weight: 400;
+    font-size: 16px;
+}
+  .sessionList span{
+    font-weight: 600;
+  }
+  .sessionList i{
+    font-weight: bolder;
+  }
+  .footer_section{
+    background-color: rgb(255 255 255 / 78%);
+   
+    color: #000;
+    padding: 10px;
+
+  }
+.footer_section .footer_subsection{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer_subsection ul{
+    margin: 0;
+    padding: 0;
+}
+.footer_subsection ul li{
+    list-style-type: none;
+    line-height: 2;
+    font-weight: 400;
+    font-size: 18px;
+}
+.footer_subsection div img{
+    width: 200px;
+}
+.float-whatsapp{
+	position:fixed;
+	width:50px;
+	height:50px;
+	bottom:110px;
+	right:40px;
+	background-color:#25d366;
+	border-radius:50px;
+	text-align:center;
+    font-size:25px;
+	box-shadow: 2px 2px 3px #999;
+    z-index:100;
+    line-height: 2;
+    cursor: pointer;
+}
+.float-phone{
+	position:fixed;
+	width:50px;
+	height:50px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	border-radius:50px;
+	text-align:center;
+     font-size:25px;
+	box-shadow: 2px 2px 3px #999;
+    z-index:100;
+    line-height: 2;
+    cursor: pointer;
+}
+.float-whatsapp a{
+    color: #FFF;
+}
+.float-phone a{
+    color: #FFF;
+}
+.my-float{
+	margin-top:16px;
+}
+.social_icon i{
+    font-size: 25px;
+}
+.social_icon i:hover{
+    font-size: 26px;
+    transition: all .3s ease-in-out;
+}
+.contact_in a{
+    text-decoration: none;
+    color: #000;
+}
+
+.groupSessions{
+  width: 45%;
+}
+@media (max-width: 768px) {
+    .hero-section {
+    flex-direction: column;
+    height: auto;
+  }
+  .hero-left, .hero-right {
+    height: 50vh;
+  }
+  .box-section {
+    margin-top: -25px;
+  }
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-img {
+    margin-bottom: 2rem;
+  }
+}
