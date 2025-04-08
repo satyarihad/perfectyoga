@@ -1,29 +1,50 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $to = "satyarihand@email.com";  // Change to your email address
-    $subject = "New Message from Website Contact Form";
+    if (isset($_POST['agree']) && $_POST['agree'] === 'yes') {
+        // Get form inputs
+        $name = $_POST['name'] ?? '';
+        $email = $_POST['email'] ?? '';
+        $phone = $_POST['phone'] ?? '';
+        $programCode = $_POST['program'] ?? '';
+        $date = $_POST['date'] ?? '';
+        $message = $_POST['message'] ?? '';
 
-    // Collect and sanitize input data
-    $name = htmlspecialchars($_POST['name']);
-    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
-    $message = htmlspecialchars($_POST['message']);
-    $phone = htmlspecialchars($_POST['phone']);
+        // Convert program code to readable name
+        $programs = [
+            'val1' => 'Garbhyog: Prenatal Yoga (For Pregnant Mothers)',
+            'val2' => 'Shakti Yoga: Preconception (Conceive Naturally)'
+        ];
 
-    // Create the email body
-    $body = "Name: $name\n";
-    $body .= "Email: $email\n\n";
-    $body .= "Message:\n$message\n";
-    $body .= "Phone:\n$phone\n";
+        $program = $programs[$programCode] ?? 'Unknown Program';
 
-    $headers = "From: $email";
+        // Detect batch (support both sets)
+        $batch = '';
+        if (isset($_POST['batch'])) {
+            $batch = $_POST['batch'];
+        } elseif (isset($_POST['batch'])) {
+            $batch = $_POST['batch'];
+        }
 
-    // Send the email
-    if (mail($to, $subject, $body, $headers)) {
-        echo "Message sent successfully!";
+        // Email setup
+        $to = "satyarihand@gmail.com";  // change this to your real email
+        $subject = "New Program Registration";
+        $body = "Name: $name\n"
+              . "Email: $email\n"
+              . "Phone: $phone\n"
+              . "Program: $program\n"
+              . "Date: $date\n"
+              . "Batch: $batch\n"
+              . "Message: $message";
+        $headers = "From: $email";
+
+        // Send email
+        if (mail($to, $subject, $body, $headers)) {
+            echo "Email sent successfully!";
+        } else {
+            echo "Error sending email.";
+        }
     } else {
-        echo "Failed to send message.";
+        echo "Please agree to the T&C.";
     }
-} else {
-    echo "Invalid request.";
 }
 ?>

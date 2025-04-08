@@ -98,7 +98,7 @@ rgba(255, 255, 255, 0.2) 102.87%
 .box-section {
   position: relative;
   z-index: 10;
-  margin-top: -90px; /* Adjust this if you want higher/lower overlap */
+  margin-top: -180px; /* Adjust this if you want higher/lower overlap */
 }
 
 .info-box {
@@ -271,15 +271,27 @@ color: #e23f32;
     border: none;
     cursor: pointer;
     border-radius: 5px;
-    text-decoration: none;
-    
+    text-decoration: none;    
 }
 .bookTrail:hover{
   background: #fff; 
   color: #000;
   /* color: #6c757d; */
 }
-
+.bookTrails {
+  background: #25d366; 
+  color: #fff;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-decoration: none;    
+}
+.bookTrails:hover{
+  background: #25d366; 
+  color: #fff;
+}
 /* Slick Arrows Customization */
 .slick-prev, .slick-next {
     font-size: 30px;
@@ -367,6 +379,33 @@ color: #e23f32;
     border: 1px solid #1c5894;
   }
  
+  .custome_review{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: .75rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+  .custome_review i{
+    background-color: #fff;
+    font-size: 2rem;
+    color: #f4efe9;
+  }
+  .custome_review .text{
+    color: #1d2939;
+  }
+.user_name_add div{
+  font-size: 1em;
+}
+  .custome_review .user_icon img{
+    width: 86px;
+    height: 86px;
+    border-radius: 50px;
+    border: 2px solid #25212154;
+  }
+  .custome_review .user_details{
+    display: flex;
+    align-items: center;
+  }
   .custome_riview img{
     width: 100%;
     height: 253px;
@@ -395,6 +434,9 @@ color: #e23f32;
 }
 .premium_yoga_faclities .heading_text span{
     color: rgb(204, 154, 58);
+}
+.form_section{
+  margin: 0 auto;
 }
 .form_section .card{
     padding: 10px;
@@ -492,7 +534,7 @@ color: #e23f32;
     font-size: 16px;
 }
   .sessionList span{
-    font-weight: 600;
+    font-weight: 500;
   }
   .sessionList i{
     font-weight: bolder;
@@ -573,7 +615,28 @@ color: #e23f32;
     color: #000;
 }
 .groupSessions{
-  width: 45%;
+  width: 48%;
+  margin: 0 auto;
+
+  border: 0px solid #fff;
+  outline: 0;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: .75rem; 
+}
+.yogafaclities{
+  border: 0px solid #fff;
+  outline: 0;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: .75rem;
+}
+.yogafaclities:hover{
+  margin-top: -10px;
+  transition: all ease-in-out .5s;
+ 
+}
+.groupSessions-group{
+  display: flex;
+  justify-content: space-between;
 }
 .about_us-sub{
   position: relative;
@@ -607,8 +670,48 @@ color: #e23f32;
     flex-direction: column;
     text-align: center;
   }
-
   .about-img {
     margin-bottom: 2rem;
+  }
+  .navbar-brand img{
+    height: 40px;
+  }
+  .days_date{
+    flex-flow: column;
+  }
+  .about_us{
+    flex-flow: column;
+  }
+  .about-section{
+    padding: 1rem 0rem;
+  }
+  .info-box{
+    padding: 1rem 0rem;
+  }
+  .yogafaclities{
+    border-radius: .1rem;
+  }
+  .how_we_are{
+    gap: 10px;
+  }
+  .groupSessions-group{
+    flex-flow: column;
+  }
+  .groupSessions{
+    width: unset;
+  }
+  .premium_yoga_faclities .heading_text{
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  .form_section{
+    padding: 0;
+  }
+  .footer_subsection{
+    flex-flow: column;
+    text-align: center;
+  }
+  .premium_yoga{
+    gap: 10px;
   }
 }
