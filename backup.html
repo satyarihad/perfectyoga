@@ -1,0 +1,42 @@
+<script>
+    document.getElementById("programForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+    
+      // Gather form data
+      const formData = new FormData(this);
+    
+      // Open Razorpay payment
+      const options = {
+        key: "rzp_live_LyEyeTkq9I4srH", // Replace with your Razorpay key
+        amount: 99 * 100, // Amount in paise (1000 INR here)
+        currency: "INR",
+        name: "Pinaki Yoga",
+        description: "Program Registration",
+        handler: function (response) {
+          // On payment success, send email via AJAX
+          fetch("send.php", {
+            method: "POST",
+            body: formData
+          })
+          .then(res => res.text())
+          .then(data => {
+            // Show thank you modal
+            const modal = new bootstrap.Modal(document.getElementById('thankYouModal'));
+            modal.show();
+    
+            // Auto-close in 10 seconds
+            setTimeout(() => {
+              modal.hide();
+            }, 10000);
+          })
+          .catch(err => alert("Something went wrong: " + err));
+        },
+        theme: {
+          color: "#3399cc"
+        }
+      };
+    
+      const rzp = new Razorpay(options);
+      rzp.open();
+    });
+    </script>

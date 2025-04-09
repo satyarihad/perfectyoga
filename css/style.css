@@ -102,7 +102,7 @@ rgba(255, 255, 255, 0.2) 102.87%
 }
 
 .info-box {
-    background-color: #25d366;
+    background-color: #cc9a3a;
     padding: 2rem;
     text-align: center;
     border-radius: 5px;
@@ -211,17 +211,17 @@ color: #e23f32;
 /* Background Images */
 .slide-1 {
     background: url('../images/slider1.jpg');
-    background-position: center;
+    height: 750px;
     background-size: cover;
-    object-fit: fill;
+    background-position: center;
     background-repeat: no-repeat;
 }
 
 .slide-2 {
-    background: url('../images/slider5.jpg');
-    background-position: center;
+    background: url('../images/slider2.jpg');
+    height: 750px;
     background-size: cover;
-    object-fit: fill;
+    background-position: center;
     background-repeat: no-repeat;
 }
 
@@ -243,23 +243,25 @@ color: #e23f32;
     margin: 0 auto;
     top: 30%;
     width: max-content;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 1);
     padding: 15px;
     border-radius: 10px;
 }
 
 /* Title */
 .hero-content h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     margin-bottom: 10px;
-    color: #8d1c1c;
+    color: #cc9a3a;
+    text-align: center;
 }
 
 /* Paragraph */
 .hero-content p {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin-bottom: 20px;
-    color: #8d1c1c;
+    color: #cc9a3a;
+    text-align: center;
 }
 
 /* Button */
@@ -279,7 +281,7 @@ color: #e23f32;
   /* color: #6c757d; */
 }
 .bookTrails {
-  background: #25d366; 
+  background: #cc9a3a;
   color: #fff;
   padding: 12px 24px;
   font-size: 1rem;
@@ -289,7 +291,7 @@ color: #e23f32;
   text-decoration: none;    
 }
 .bookTrails:hover{
-  background: #25d366; 
+  background: #cc9a3a; 
   color: #fff;
 }
 /* Slick Arrows Customization */
@@ -392,6 +394,11 @@ color: #e23f32;
   }
   .custome_review .text{
     color: #1d2939;
+    display: -webkit-box;
+    
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 .user_name_add div{
   font-size: 1em;
@@ -505,11 +512,23 @@ color: #e23f32;
   .boxShadow label{
     font-weight: 400;
     color: oklch(.446 .03 256.802);
+    font-size: 14px;
   }
+  .remaining_char{
+    font-weight: 400;
+    color: oklch(.446 .03 256.802);
+    font-size: 14px;
+}
+  
   .boxShadow .personalized_attention{
     display: flex;
     align-items: center;
     line-height: 3;
+  }
+  .dropdown_menu select{
+    font-weight: 400;
+    color: oklch(.446 .03 256.802);
+    font-size: 14px;
   }
  .personalized_attention{
     font-weight: 400;
@@ -533,8 +552,19 @@ color: #e23f32;
     font-weight: 400;
     font-size: 16px;
 }
+.sessionList ul {
+  margin: 0;
+  padding: 0;
+}
+.sessionList ul li{
+  list-style-type: none;
+  text-indent: -7px;
+  margin-left: 18px;
+  line-height: 25px;
+  margin-top: 20px;
+}
   .sessionList span{
-    font-weight: 500;
+    font-weight: 600;
   }
   .sessionList i{
     font-weight: bolder;
@@ -551,6 +581,10 @@ color: #e23f32;
     align-items: center;
     justify-content: space-between;
 }
+.footer_section .footer_subsection div{
+  text-transform: uppercase;
+  font-weight: 500;
+}
 .footer_subsection ul{
     margin: 0;
     padding: 0;
@@ -562,7 +596,7 @@ color: #e23f32;
     font-size: 18px;
 }
 .footer_subsection div img{
-    width: 200px;
+    width: 150px;
 }
 .float-whatsapp{
 	position:fixed;
@@ -604,15 +638,16 @@ color: #e23f32;
 	margin-top:16px;
 }
 .social_icon i{
-    font-size: 25px;
+  font-size: 27px;
 }
 .social_icon i:hover{
-    font-size: 26px;
+    font-size: 27px;
     transition: all .3s ease-in-out;
 }
 .contact_in a{
     text-decoration: none;
     color: #000;
+    font-size: 14px;
 }
 .groupSessions{
   width: 48%;
@@ -713,5 +748,13 @@ color: #e23f32;
   }
   .premium_yoga{
     gap: 10px;
+  }
+  .sessionList ul li{
+    margin-top: 10px;
+  }
+  .groupSession_mobile{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
   }
 }
