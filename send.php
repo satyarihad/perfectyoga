@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         // Email setup
-        $to = "satyarihand@gmail.com";  // change this to your real email
+        $to = "pinakiyoga@gmail.com";  // change this to your real email
         $subject = "New Program Registration";
         $body = "Name: $name\n"
               . "Email: $email\n"
@@ -48,3 +48,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
+

@@ -186,8 +186,9 @@ rgba(255, 255, 255, 0.2) 102.87%
     background-color: #0f6646;
 
   }
-.google_gredient{
-color: #e23f32;
+.google_gredient img{
+  width: 45px !important;
+  margin-left: -5px;
 }
 /* Full-screen Slider */
 .hero-slider {
@@ -294,6 +295,29 @@ color: #e23f32;
   background: #cc9a3a; 
   color: #fff;
 }
+.submitpay {
+  background: #3e5646;
+  color: #fff;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-decoration: none;    
+}
+.submitpay:hover{
+  background: #3e5646; 
+  color: #fff;
+}
+.join-now {
+  background: #3e5646;
+  color: #fff;    
+}
+.join-now:hover{
+  background: #3e5646; 
+  color: #fff;
+}
+
 /* Slick Arrows Customization */
 .slick-prev, .slick-next {
     font-size: 30px;
@@ -312,12 +336,12 @@ color: #e23f32;
     cursor: pointer;
 }
 
-.slick-prev {
+/* .slick-prev {
     left: 20px;
-}
+} */
 
 .slick-next {
-    right: 100px;
+    right: 50px;
 }
 
 /* Custom Arrows Icon */
@@ -385,7 +409,7 @@ color: #e23f32;
     background-color: #fff;
     padding: 20px;
     border-radius: .75rem;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
   }
   .custome_review i{
     background-color: #fff;
@@ -402,25 +426,37 @@ color: #e23f32;
   }
 .user_name_add div{
   font-size: 1em;
+  font-size: 18px;
+  font-weight: 400;
+  
 }
   .custome_review .user_icon img{
-    width: 86px;
-    height: 86px;
+    width: 106px;
+    height: 106px;
     border-radius: 50px;
     border: 2px solid #25212154;
   }
   .custome_review .user_details{
     display: flex;
     align-items: center;
+    justify-content: space-between;
   }
   .custome_riview img{
     width: 100%;
     height: 253px;
 }
-
+.user_details-sub{
+  display: flex;
+  align-items: center;
+}
+.star_rating{
+  padding-right: 10px;
+}
+.star_rating img{
+  max-width: 1.8rem;
+}
 /* Premium Pilate */
 .premium_yoga_faclities .boxShadow{
-
     border: 0px solid #fff;
     outline: 0;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -484,7 +520,7 @@ color: #e23f32;
     font-size: 16px;
   }
   .customer-slider{
-    max-width: 500px;
+    max-width: 900px;
     margin: 0 auto;
     width: 100%;
   }
@@ -594,9 +630,14 @@ color: #e23f32;
     line-height: 2;
     font-weight: 400;
     font-size: 18px;
+    display: flex;
 }
 .footer_subsection div img{
-    width: 150px;
+    width: 30px;
+}
+
+.mid-icon ul img{
+  width: 150px;
 }
 .float-whatsapp{
 	position:fixed;
@@ -637,6 +678,7 @@ color: #e23f32;
 .my-float{
 	margin-top:16px;
 }
+
 .social_icon i{
   font-size: 27px;
 }
@@ -741,6 +783,8 @@ color: #e23f32;
   }
   .form_section{
     padding: 0;
+    gap: 10px;
+    flex-flow: column;
   }
   .footer_subsection{
     flex-flow: column;
@@ -756,5 +800,12 @@ color: #e23f32;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+  }
+  .hero-content{
+    max-width: 350px;
+    width: 100%;
+  }
+  .custome_review .user_details{
+    flex-flow: column;
   }
 }
